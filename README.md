@@ -30,8 +30,8 @@ cars = pd.read_csv("cars.csv")
 cars = cars.iloc
 cars
 
-A. Positional and Label-Based Slicing
-Inspecting the dataset's dimensions and extracting specific rows and columns.
+### A. Positional and Label-Based Slicing
+### Inspecting the dataset's dimensions and extracting specific rows and columns.
 
 # Print shape and column list
 print("Shape:", cars.shape)
@@ -44,8 +44,8 @@ cars_6_to_10
 # Display only specific columns for the sliced data
 cars_6_to_10[['Model', 'mpg', 'cyl', 'hp', 'gear']]
 
-B. Model Lookup
-Filtering the dataframe to isolate individual car models based on a condition.
+###B. Model Lookup
+###Filtering the dataframe to isolate individual car models based on a condition.
 
 # Look up Toyota Corolla
 toyota = cars[cars['Model'] == "Toyota Corolla"]
@@ -55,8 +55,8 @@ toyota
 pontiac = cars[cars['Model'] == "Pontiac Firebird"]
 pontiac
 
-C. Multi-Model Subsetting
-Using a list to filter for multiple specific car models simultaneously, and selecting a subset of columns for the output.
+###C. Multi-Model Subsetting
+###Using a list to filter for multiple specific car models simultaneously, and selecting a subset of columns for the output.
 
 target_models = ['Datsun 710', 'Lotus Europa', 'Ferrari Dino']
 selected_cars = cars[cars['Model'].isin(target_models)][['Model', 'mpg', 'cyl', 'hp', 'gear']]
